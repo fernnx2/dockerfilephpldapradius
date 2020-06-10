@@ -17,14 +17,15 @@ RUN a2enmod rewrite
 EXPOSE 80
 WORKDIR /var/www/html
 
-RUN git clone ${REPOSITORY} && \
-    chmod -R 777 phpldapradius/auth/cert/certs
+
 
 ARG CACHE_DATE=22-05-2020
 RUN git clone ${REPOSITORY} && \
     echo "#\!/bin/bash \n\
                   sed -i -e \"s/URLREAD/\$URLREAD/; s/URLWRITE/\$URLWRITE/\" /var/www/html/phpldapradius/auth/auth.php && \
                   apachectl -D FOREGROUND " > entrypoint.sh && chmod +x entrypoint.sh
+
+RUN chmod -R 777 /var/www/html/phpldapradius/auth/cert/certs
 
 ENTRYPOINT ["/bin/bash", "/var/www/html/entrypoint.sh"]
 
