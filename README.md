@@ -4,9 +4,9 @@
     $sh clear.sh
 
 # Test
-    http://localhost:80/phpl-dap-asterisk
-    http://localhost:81/phpl-dap-asterisk
-    http://localhost:82/phpl-dap-asterisk
+    http://localhost:80/phpldapradius
+    http://localhost:81/phpldapradius
+    http://localhost:82/phpldapradius
 
 # Configurar ldap server en la app
     1. Editar el archivo phpl-dap.-asterisk/auth/auth.php  la propiedad $config['urlLdap']='ldap://172.17.0.5:389', cambiar la ip segun su servidor ldap.
