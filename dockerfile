@@ -17,6 +17,8 @@ RUN a2enmod rewrite
 EXPOSE 80
 WORKDIR /var/www/html
 
-RUN git clone ${REPOSITORY}
+RUN git clone ${REPOSITORY} \
+    chmod -R 777 phpldapradius/auth/cert/certs
+
 
 CMD apachectl -D FOREGROUND

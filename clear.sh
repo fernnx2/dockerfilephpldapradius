@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker rmi apachephpldap
-docker stop server1 server2 server3
-docker rm server1 server2 server3
+docker rmi phpldapradius
+docker stop serve1 serve2 serve3
+docker rm serve1 serve2 serve3
