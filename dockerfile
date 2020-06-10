@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 LABEL maintainer=devfernando95@gmail.com 
-ENV REPOSITORY="https://github.com/fernnx2/phpldapradius/tree/production"
+ENV REPOSITORY="https://github.com/fernnx2/phpldapradius"
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
